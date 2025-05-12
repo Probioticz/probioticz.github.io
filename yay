@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Probioticz - The Coding Vibe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #8e2de2, #4a00e0);
+      color: white;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+      background: rgba(0,0,0,0.3);
+      border-bottom: 2px solid white;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    .skills, .projects {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .skill, .project {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 10px;
+      min-width: 150px;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1rem;
+      background: rgba(0,0,0,0.2);
+      font-size: 0.9rem;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/mnt/data/Probioticz.png" alt="Probioticz Avatar" class="avatar" />
+    <h1>Yo, I'm Probioticz 👾</h1>
+    <p>Scratcher, coder, and the king of console.log()</p>
+  </header>
+
+  <section>
+    <h2>My Skills 💻🔥</h2>
+    <div class="skills">
+      <div class="skill">Scratch (obviously 🧃)</div>
+      <div class="skill">Gandi IDE</div>
+      <div class="skill">Turbowarp</div>
+      <div class="skill">PenguinMod</div>
+      <div class="skill">console.log("JS vibes")</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Projects 🛠️</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Epic Project 1</h3>
+        <p>A game you didn’t know you needed... until now.</p>
+        <a href="https://turbowarp.org" target="_blank">Check it on Turbowarp</a>
+      </div>
+      <div class="project">
+        <h3>Script of Chaos</h3>
+        <p>Made with console.log and pure magic 🪄.</p>
+        <a href="#" target="_blank">View on Gandi IDE</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact Me 📬</h2>
+    <p>Wanna collab, say hi, or send memes? Hit me up:</p>
+    <p><strong>Email:</strong> <a href="mailto:probioticz05@gmail.com">probioticz05@gmail.com</a></p>
+    <p><strong>Scratch:</strong> <a href="https://scratch.mit.edu/users/TeckiScratch05/" target="_blank">@TeckiScratch05</a></p>
+  </section>
+
+  <footer>
+    <p>Made with rage, humor, and maybe too much coffee ☕ — Probioticz &copy; 2025</p>
+  </footer>
+</body>
+</html>
