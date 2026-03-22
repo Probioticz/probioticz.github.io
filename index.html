@@ -1,106 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Probioticz - The Coding Vibe</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(to right, #8e2de2, #4a00e0);
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 2rem;
-      background: rgba(0,0,0,0.3);
-      border-bottom: 2px solid white;
-    }
-    h1 {
-      font-size: 3rem;
-    }
-    section {
-      padding: 2rem;
-    }
-    .skills, .projects {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .skill, .project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1rem;
-      border-radius: 10px;
-      min-width: 150px;
-    }
-    footer {
-      margin-top: 3rem;
-      padding: 1rem;
-      background: rgba(0,0,0,0.2);
-      font-size: 0.9rem;
-    }
-    a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      margin-top: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otto's Burrow :: Silly Lil Capybara</title>
+    <style>
+        /* OTTO'S GOOBER STYLES */
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Bubblegum+Sans&display=swap');
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            /* Capybara color palette (mud and grass) */
+            background-color: #D2B48C; /* Tan/Mud */
+            color: #5D4037; /* Brown text */
+            margin: 0;
+            padding: 20px;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewport="0 0 100 100" style="fill:%23FFA500;font-size:24px;"><text y="50%">🍊</text></svg>'), auto;
+        }
+
+        header {
+            text-align: center;
+            background: #8BC34A; /* Grass green */
+            border: 5px wavy #4CAF50;
+            padding: 20px;
+            border-radius: 20px 0px 20px 0px;
+            box-shadow: 10px 10px 0px #5D4037;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Bubblegum Sans', cursive;
+            font-size: 4rem;
+            color: #4CAF50;
+            text-shadow: 3px 3px 0px white;
+            margin: 0;
+            animation: chill-bounce 2s infinite ease-in-out;
+        }
+
+        /* A slow, relaxed bounce */
+        @keyframes chill-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            background: white;
+            display: inline-block;
+            padding: 5px 15px;
+            border: 2px dashed #5D4037;
+            margin-top: 10px;
+        }
+
+        .main-content {
+            max-width: 800px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: #FFF8E1;
+            border: 3px solid #5D4037;
+            padding: 15px;
+            transform: rotate(1deg);
+            transition: transform 0.3s;
+        }
+
+        .card:nth-child(even) {
+            transform: rotate(-1deg);
+            background: #FFFFFF;
+        }
+
+        .card:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 0 15px orange;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #8BC34A;
+            text-decoration: underline wavy;
+        }
+
+        .status-box {
+            grid-column: 1 / -1;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 10px;
+            border: 3px double white;
+        }
+
+        .music-player {
+            margin-top: 10px;
+            background: #333;
+            color: #0f0;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            border-top: 2px dashed #5D4037;
+            padding-top: 20px;
+        }
+
+        .btn {
+            background: #FF9800;
+            border: 3px solid #5D4037;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            font-family: inherit;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 3px 3px 0px #5D4037;
+        }
+
+        .btn:active {
+            transform: translate(3px, 3px);
+            box-shadow: none;
+        }
+
+        .capybara-art {
+            font-size: 4rem;
+            display: block;
+            margin: 0 auto;
+            animation: spin 10s infinite linear;
+        }
+
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="/mnt/data/Probioticz.png" alt="Probioticz Avatar" class="avatar" />
-    <h1>Yo, I'm Probioticz 👾</h1>
-    <p>Scratcher, coder, and the king of console.log()</p>
-  </header>
 
-  <section>
-    <h2>My Skills 💻🔥</h2>
-    <div class="skills">
-      <div class="skill">Scratch (obviously 🧃)</div>
-      <div class="skill">Gandi IDE</div>
-      <div class="skill">Turbowarp</div>
-      <div class="skill">PenguinMod</div>
-      <div class="skill">console.log("JS vibes")</div>
+    <header>
+        <h1>Otto</h1>
+        <div class="subtitle">A silly lil capybara who lives in ur computr</div>
+        <p style="margin-bottom: 0;">Current Mood: 🛁 Chill</p>
+    </header>
+
+    <!-- Scrolling status bar because it's cool -->
+    <marquee behavior="scroll" direction="left" style="background: #5D4037; color: white; padding: 5px; margin-top: 20px;">
+        🍊 Eating oranges... 🖥️ Writing code (with bugs)... 🎹 Making beep boop sounds... 🛁 Thinking about a bath... 🍊
+    </marquee>
+
+    <div class="main-content">
+        
+        <!-- Bio Card -->
+        <div class="card">
+            <h2>Who am i?</h2>
+            <p>Hewwo! My name is <strong>Otto</strong>. I am a capybara.</p>
+            <p>I like to sit in water, eat treats, and make things on the interwebs. I am very frenly so say hello!</p>
+            <p><em>(I wrote this website with my nose).</em></p>
+        </div>
+
+        <!-- Coding Card -->
+        <div class="card">
+            <h2>Coding</h2>
+            <p>I am a <u>progammer</u>. I know HTML, CSS, and how to press buttons on a keyboard.</p>
+            <p>My code is 10% logic and 90% "why is this broken?".</p>
+            <button class="btn" onclick="alert('Error 404: Brain not found.');">Run My Code</button>
+        </div>
+
+        <!-- Art Card -->
+        <div class="card">
+            <h2>Drawring</h2>
+            <p>Sometimes I draw stuff. Mostly mud, water, and oranges.</p>
+            <p>I use my claws as a stylus. It is hard to get details but I try my best.</p>
+            <div style="height: 100px; background: #ddd; border: 1px solid #999; display: flex; align-items: center; justify-content: center; color: #777;">
+                [Art goes here]
+            </div>
+        </div>
+
+        <!-- Music Card -->
+        <div class="card">
+            <h2>Muzic</h2>
+            <p>I make random noises. Sometimes they sound like songs!</p>
+            <p>Genre: Ambient Grunt & Bass.</p>
+            <div class="music-player">
+                > Playing: track_01_final_FINAL_v3.mp3<br>
+                <span style="animation: blink 1s infinite;">▮</span> [=========          ]
+            </div>
+        </div>
+
+        <!-- Status Box -->
+        <div class="status-box">
+            <strong>OTTO STATISTICS:</strong><br>
+            Orange Consumed Today: 3 🍊<br>
+            Naps Taken: 14 💤<br>
+            Bugs in Code: 999 🐛
+        </div>
+
     </div>
-  </section>
 
-  <section>
-    <h2>Featured Projects 🛠️</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Epic Project 1</h3>
-        <p>A game you didn’t know you needed... until now.</p>
-        <a href="https://turbowarp.org" target="_blank">Check it on Turbowarp</a>
-      </div>
-      <div class="project">
-        <h3>Script of Chaos</h3>
-        <p>Made with console.log and pure magic 🪄.</p>
-        <a href="#" target="_blank">View on Gandi IDE</a>
-      </div>
-    </div>
-  </section>
+    <footer>
+        <p class="capybara-art">🦫</p>
+        <p>Made with love (and paws) by Otto the Capybara.</p>
+        <p style="font-size: 0.8rem;">© 2024 The Burrow. Pls don't copy my homework.</p>
+        <div class="visitor-counter" style="background: white; padding: 5px; border: 2px inset grey; display: inline-block;">
+            You are visitor #000008
+        </div>
+    </footer>
 
-  <section>
-    <h2>Contact Me 📬</h2>
-    <p>Wanna collab, say hi, or send memes? Hit me up:</p>
-    <p><strong>Email:</strong> <a href="mailto:probioticz05@gmail.com">probioticz05@gmail.com</a></p>
-    <p><strong>Scratch:</strong> <a href="https://scratch.mit.edu/users/TeckiScratch05/" target="_blank">@TeckiScratch05</a></p>
-  </section>
+    <!-- Blink animation for the music player -->
+    <style>
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
 
-  <footer>
-    <p>Made with rage, humor, and maybe too much coffee ☕ — Probioticz &copy; 2025</p>
-  </footer>
 </body>
 </html>
