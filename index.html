@@ -10,7 +10,6 @@
 
         body {
             font-family: 'Comic Neue', cursive;
-            /* Capybara color palette (mud and grass) */
             background-color: #D2B48C; /* Tan/Mud */
             color: #5D4037; /* Brown text */
             margin: 0;
@@ -37,7 +36,6 @@
             animation: chill-bounce 2s infinite ease-in-out;
         }
 
-        /* A slow, relaxed bounce */
         @keyframes chill-bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
@@ -110,6 +108,43 @@
             font-size: 0.9rem;
         }
 
+        /* SOCIALS SECTION */
+        .socials-section {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        .socials-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            background: white;
+            border: 3px solid #5D4037;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #5D4037;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transform: rotate(calc(var(--rot) * 1deg));
+            transition: all 0.2s;
+            box-shadow: 5px 5px 0px #8BC34A;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-link:hover {
+            transform: rotate(0deg) scale(1.2);
+            background: #FF9800;
+            color: white;
+        }
+
         footer {
             text-align: center;
             margin-top: 50px;
@@ -137,11 +172,16 @@
             font-size: 4rem;
             display: block;
             margin: 0 auto;
-            animation: spin 10s infinite linear;
+            animation: spin 20s infinite linear;
         }
 
         @keyframes spin {
             100% { transform: rotate(360deg); }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
     </style>
 </head>
@@ -153,7 +193,6 @@
         <p style="margin-bottom: 0;">Current Mood: 🛁 Chill</p>
     </header>
 
-    <!-- Scrolling status bar because it's cool -->
     <marquee behavior="scroll" direction="left" style="background: #5D4037; color: white; padding: 5px; margin-top: 20px;">
         🍊 Eating oranges... 🖥️ Writing code (with bugs)... 🎹 Making beep boop sounds... 🛁 Thinking about a bath... 🍊
     </marquee>
@@ -207,22 +246,59 @@
 
     </div>
 
+    <!-- SOCIALS SECTION STARTS HERE -->
+    <div class="socials-section">
+        <h2 style="text-decoration: underline wavy; color: #5D4037;">My Linkz (Soshals)</h2>
+        <p>Click them before they run away!</p>
+        
+        <div class="socials-grid">
+            <!-- Youtube -->
+            <a href="https://www.youtube.com/@Otto11X" target="_blank" class="social-link" style="--rot: -3">
+                📺 Youtube
+            </a>
+
+            <!-- Github -->
+            <a href="https://github.com/Probioticz" target="_blank" class="social-link" style="--rot: 2">
+                🐙 Github
+            </a>
+
+            <!-- Scratch -->
+            <a href="https://scratch.mit.edu/users/TeckiScratch05/" target="_blank" class="social-link" style="--rot: -1">
+                🐱 Scratch
+            </a>
+
+            <!-- Penguinmod -->
+            <a href="https://penguinmod.com/user?name=Otto" target="_blank" class="social-link" style="--rot: 4">
+                🐧 Penguinmod
+            </a>
+
+            <!-- Itch.io -->
+            <a href="https://ottocapibara.itch.io/" target="_blank" class="social-link" style="--rot: -2">
+                🎮 Itch.io
+            </a>
+
+            <!-- Gifspace (Your masterpiece) -->
+            <a href="https://probioticz.github.io/gifspace/" target="_blank" class="social-link" style="--rot: 3; background-color: #ffffd4;">
+                🖼️ Gifspace
+            </a>
+
+            <!-- Fluxer -->
+            <!-- Note: Fluxer links are tricky so I just put the username for copy/paste -->
+            <span class="social-link" style="--rot: -4; cursor: default; background-color: #e0e0e0;" onclick="alert('My Fluxer is Otto#6424 (Copy it!)')">
+                💬 Fluxer
+            </span>
+        </div>
+    </div>
+    <!-- SOCIALS SECTION ENDS HERE -->
+
     <footer>
         <p class="capybara-art">🦫</p>
         <p>Made with love (and paws) by Otto the Capybara.</p>
-        <p style="font-size: 0.8rem;">© 2024 The Burrow. Pls don't copy my homework.</p>
+        <p style="font-size: 0.8rem;">© 2026 The Burrow. Pls don't copy my homework.</p>
         <div class="visitor-counter" style="background: white; padding: 5px; border: 2px inset grey; display: inline-block;">
-            You are visitor #000008
+            You are visitor #000009
         </div>
     </footer>
-
-    <!-- Blink animation for the music player -->
-    <style>
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-    </style>
 
 </body>
 </html>
